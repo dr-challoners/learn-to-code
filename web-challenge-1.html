@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Code_Camp: Challenge 1</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.action {
+				cursor: pointer;
+				color: #111166;
+			}
+
+			.action:hover {
+				text-decoration: underline;
+			}
+
+			.unravel {
+				display: none;
+			}
+			.code {
+				align-content: stretch;
+				align-items: stretch;
+				align-self: stretch;
+				background: #EEEEEE;
+				border-bottom: 1px solid #D4D4D4;
+				border-left: 1px solid #D4D4D4;
+				border-right: 1px solid #D4D4D4;
+				border-top: 1px solid #D4D4D4;
+				color: #000000;
+				display: block;
+				font: normal normal 400 13.2px/normal "Courier New";
+				padding: 10px;
+				resize: none;
+			}
+
+			h1 {
+				color: #FF0000;
+				float: right;
+				margin-top: 0px;
+				font-size: 3em;
+
+			}
+
+			h2 {
+				color: #444444;
+			}
+
+			h3 {
+
+			}
+
+			body {
+				font-family: "Myriad Pro", "Arial", sans-serif;
+				letter-spacing: 0.5px;
+				word-spacing: 0.5px;
+			}
+
+			ul {
+				background-color: #FFD8AA;
+			}
+
+			ol {
+				background-color: #FFD8AA;
+			}
+
+			li {
+				padding-bottom: 5px;
+			}
+
+			p {
+				font-family: "Tahoma", "Times New Roman", serif;
+			}
+
+			.help {
+				background-color: #DDFFDD;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Code_Camp</h1>
+
+		<h2>Challenge 1: Get Your Console On ...</h2>
+
+		<h3>For Starters</h3>
+
+		<p>Every desktop browser has a set of <a href="http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers" target="new">developer tools</a> to help you make stuff! These are either availabe directly in the browser, or as a simple add-on (F12 in IE &amp; Firefox, ctrl-shift-i in Opera &amp; Chrome, ctrl-alt-i in Safari). Your first step is to get these tools open and get onto the console! Developer tools allow us to look inside the black box of web development....they allow us to make things by trial and error....the best way to learn!</p>
+
+
+		<h3>The Console</h3>
+
+		<p>The console is, in coding terms, a way of talking to the web browser, telling it to do things and hearing what it's got to say!</p>
+
+
+		<h3>The Challenge</h3>
+
+		<p>We're going to start by remixing a website so you can see how you can use the console to develop your coding skills. As we're all budding Javascript Ninjas at this point, we're going to start playing around with <a href="http://stackoverflow.com/" _target="new">StackOverflow</a></p>
+
+		<p>If you 'modify' the page beyond repair, you can just reload the page to get a nice new version to destroy all over again!</p>
+
+		<!-- Level A -->
+		<h3><a name="level_a" onclick="$('#level_a_content').toggle();" class="action">Just Starting Out ...</a></h3>
+
+		<div id="level_a_content" class="unravel">
+			<p>Let's find out what the console can do! Your challenge is to change the text in parts of the page by finding how to manipulate [select] individual parts of the page [elements]. This is really a two step process - firstly, how do you locate [address] the part of the page you'd like to change. Secondly, how do you change it?</p>
+			<p>The key to the first part is to look for the id of a part of the page, it's address. The easiest way to do this is via the developer tools, simple right click on the part you'd like to mess around with and select 'inspect element'. Look for the 'id' attribute and get it's value! For example, the heading that says 'Top Questions' has an id of 'h-top-questions'.</p>
+			<p>Next, you'll want to manipulate it's value (e.g. set the text to something different). You've got to know what 'property' you want to change, but mostly they are quite obvious when you find them (e.g. text or innerText). Google for 'change element text javascript' or 'change element text jquery' to help find a solution.</p>
+			<p>REMEMBER: Case Matters ... if you get it wrong, the console will tell you what is wrong so you can fix it!</p>
+
+			<div onclick="$('#level_a_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_a_help" class="unravel help">
+				<p>There are two easy ways to manipulate elements, firstly by using the 'getElementById' method of the document and secondly by using a jQuery selector.
+				<p><div class="code">document.getElementById("h-top-questions").innerText = "Boring Questions";</div></p>
+				<p><div class="code">$("#tell-me-more").text("Boring Questions");</div></p>
+			</div>
+		</div>
+		<!-- Level A -->
+
+
+		<!-- Level B -->
+		<h3><a name="level_b" onclick="$('#level_b_content').toggle();" class="action">Staking out the Middle Ground ...</a></h3>
+
+		<div id="level_b_content" class="unravel">
+			<p>Your job is to play around with the look [styling] of the site. Don't like the background colour? Change it.. Don't like where the logo is (or what the logo is). Change it...</p>
+			<p>Use a JQuery <a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp" target="new">selector</a> to grab the element or elements you want (use 'inspect element' to get IDs and CSS classes). Then take advantage of JQuery's CSS manipulation methods (Google for 'JQuery CSS') and try to change some colours, fonts and positions.</p>
+			<div onclick="$('#level_b_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_b_help" class="unravel">
+				<p>Make the background yellow:</p>
+				<div class="code">$("body").css("background-color", "yellow");</div>
+				<p>Move the logo to the left:</p>
+				<div class="code">$("#hlogo").css({"position": "absolute", "left": 0});</div>
+			</div>
+		</div>
+		<!-- Level B -->
+
+
+		<!-- Level C -->
+		<h3><a name="level_c" onclick="$('#level_c_content').toggle();" class="action">Deep Into the Zone ...</a></h3>
+
+		<div id="level_c_content" class="unravel">
+			<p>How about making this page a little more lively. I think we'd all like to see some animation happening here. Get the logo moving bouncing around the screen, maybe even on demand (inject a little button into the page by using the JQuery .prepend method and assign a <a href="http://api.jquery.com/click/" target="new">click event</a>).</p>
+			<div onclick="$('#level_c_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_c_help" class="unravel">
+				<p>How about:</p>
+				<div class="code">$("#hlogo").css({"position": "absolute", "z-index": "100"}).animate({left: "40%", top: "40%"}, 2000).animate({left: "80%", top: "0%"}, 2000).animate({left: "0%", top: "0%"}, 2000);</div>
+				<p>Or:</p>
+				<div class="code">$("&lt;button /&gt;", {id: "btn_Do", text: "Click_Me"}).click(function() {$("#hlogo").css({"position": "absolute", "z-index": "100"}).animate({left: "40%", top: "40%"}, 2000).animate({left: "80%", top: "0%"}, 2000).animate({left: "0%", top: "0%"}, 2000);}).prependTo("body");</div>
+			</div>
+		</div>
+		<!-- Level C -->
+
+	</body>
+</html>
