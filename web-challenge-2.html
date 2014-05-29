@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Code_Camp: Challenge 2</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.action {
+				cursor: pointer;
+				color: #111166;
+			}
+
+			.action:hover {
+				text-decoration: underline;
+			}
+
+			.unravel {
+				display: none;
+			}
+			.code {
+				align-content: stretch;
+				align-items: stretch;
+				align-self: stretch;
+				background: #EEEEEE;
+				border-bottom: 1px solid #D4D4D4;
+				border-left: 1px solid #D4D4D4;
+				border-right: 1px solid #D4D4D4;
+				border-top: 1px solid #D4D4D4;
+				color: #000000;
+				display: block;
+				font: normal normal 400 13.2px/normal "Courier New";
+				padding: 10px;
+				resize: none;
+			}
+
+			h1 {
+				color: #FF0000;
+				float: right;
+				margin-top: 0px;
+				font-size: 3em;
+
+			}
+
+			h2 {
+				color: #444444;
+			}
+
+			h3 {
+
+			}
+
+			body {
+				font-family: "Myriad Pro", "Arial", sans-serif;
+				letter-spacing: 0.5px;
+				word-spacing: 0.5px;
+			}
+
+			ul {
+				background-color: #FFD8AA;
+			}
+
+			ol {
+				background-color: #FFD8AA;
+			}
+
+			li {
+				padding-bottom: 5px;
+			}
+
+			p {
+				font-family: "Tahoma", "Times New Roman", serif;
+			}
+
+			.help {
+				background-color: #DDFFDD;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Code_Camp</h1>
+
+		<h2>Challenge 2: Squashing those Bugs ...</h2>
+
+		<h3>For Starters</h3>
+
+		<p>Almost every piece of code starts out life wrong. It bugs, it errors and it crashes. It's up to us (as 'persistant' digital makers &amp; coders) to figure out what is wrong and to fix it. It's always better to learn HOW to do this troubleshooting, rather than try (and fail) to write perfect code each and every time!</p>
+
+		<div>There are a number of different 'types' of problems that we come across when coding for the web...</div>
+
+		<ol>
+			<li>Syntax Errors</li>
+			<li>Algorithmic Errors</li>
+			<li>State Errors</li>
+			<li>"No Idea How to Do This" Errors</li>
+		</ol>
+
+		<p>Luckily we have a number of tools to help us (certainly with the first one and some of the second too). You can find online 'code checkers', which are normally found under the moniker of <a href="http://en.wikipedia.org/wiki/Lint_(software)" target="new">'lint'</a> (e.g. <a href="http://www.jshint.com" target="new">JS Hint</a>, <a href="http://www.jslint.com/" target="new">JS Lint</a>, <a href="http://www.javascriptlint.com/online_lint.php" target="new">Javacript Lint Online</a>).</p>
+
+		<h3>The Challenge</h3>
+
+		<p>We're going to look at how to identify &amp; solve coding errors. It's your challenge to find &amp; fix them.</p>
+
+		<!-- Level A -->
+		<h3><a name="level_a" onclick="$('#level_a_content').toggle();" class="action">Just Starting Out ...</a></h3>
+
+		<div id="level_a_content" class="unravel">
+			<p>A syntax error is one where you've literally just typed something wrong. Perhaps you've mixed up (brackets) and {braces}? Or haven't closed them properly? Or mistyped a function name?
+			<p>Go to <a href="http://jsbin.com/agigim/latest" target="new">this page</a> and have a look at the buttons. Some of them work, some of them don't. It's your job to 'fix' the ones that don't!</p>
+			<p>REMEMBER: Capitalisation MATTERS!</p>
+			<div onclick="$('#level_a_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_a_help" class="unravel help">
+				<p>JQuery fails silently (so wherever you see a '$' sign at the start of the line, the code might not work, but it probably won't throw an error)</p>
+				<p>The selectors which we use in JQuery need to be quite precise. If they are spelt incorrectly, they won't work.</p>
+				<p>If you have the Developer Tools open and an error is found [thrown] in your code, you will get taken to precisely the point where the error is, making it easy for you to fix it!</p>
+			</div>
+		</div>
+		<!-- Level A -->
+
+
+		<!-- Level B -->
+		<h3><a name="level_b" onclick="$('#level_b_content').toggle();" class="action">Staking out the Middle Ground ...</a></h3>
+
+		<div id="level_b_content" class="unravel">
+			<p>An algorithmic error occurs when your code runs, but doesn't actually do what you quite wanted!</p>
+			<p>Go to <a href="http://jsbin.com/ipogut/latest" target="new">this page</a> 
+			<div onclick="$('#level_b_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_b_help" class="unravel help">
+				<p>We'd like to display a Line for Every Number between our two boundaries...</p>
+				<div class="code">for (var i=_from;i&lt;_to;i++)<br/>
+				{<br/>
+                  $("&lt;p/&gt;").text("Line " + i).addClass(_class).appendTo($("div:first")); <br/>
+                }</div>
+				<p>Think about the 'for' line. How many times is it running? Is that enough?</p>
+			</div>
+		</div>
+		<!-- Level B -->
+
+
+		<!-- Level C -->
+		<h3><a name="level_c" onclick="$('#level_c_content').toggle();" class="action">Deep Into the Zone ...</a></h3>
+
+		<div id="level_c_content" class="unravel">
+
+			<p>Go to <a href="http://jsbin.com/owapav/latest" target="new">this page</a>. Infuriatingly the code words fine for a Start Value of 1 and an End Value of 10. However, if you try values of 5 to 10, it fails. Why?</p>
+			<div onclick="$('#level_c_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_c_help" class="unravel help">
+				<p>You've got to think about <a href="http://www.w3schools.com/jsref/jsref_parseint.asp">datatypes</a> ...</p>
+			</div>
+		</div>
+		<!-- Level C -->
+
+	</body>
+</html>
