@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Code_Camp: Challenge 3</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			.action {
+				cursor: pointer;
+				color: #111166;
+			}
+
+			.action:hover {
+				text-decoration: underline;
+			}
+
+			.unravel {
+				display: none;
+			}
+			.code {
+				align-content: stretch;
+				align-items: stretch;
+				align-self: stretch;
+				background: #EEEEEE;
+				border-bottom: 1px solid #D4D4D4;
+				border-left: 1px solid #D4D4D4;
+				border-right: 1px solid #D4D4D4;
+				border-top: 1px solid #D4D4D4;
+				color: #000000;
+				display: block;
+				font: normal normal 400 13.2px/normal "Courier New";
+				padding: 10px;
+				resize: none;
+			}
+
+			h1 {
+				color: #FF0000;
+				float: right;
+				margin-top: 0px;
+				font-size: 3em;
+
+			}
+
+			h2 {
+				color: #444444;
+			}
+
+			h3 {
+
+			}
+
+			body {
+				font-family: "Myriad Pro", "Arial", sans-serif;
+				letter-spacing: 0.5px;
+				word-spacing: 0.5px;
+			}
+
+			ul {
+				background-color: #FFD8AA;
+			}
+
+			ol {
+				background-color: #FFD8AA;
+			}
+
+			li {
+				padding-bottom: 5px;
+			}
+
+			p {
+				font-family: "Tahoma", "Times New Roman", serif;
+			}
+
+			.help {
+				background-color: #DDFFDD;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Code_Camp</h1>
+
+		<h2>Challenge 3: Debugging ...</h2>
+
+		<h3>For Starters</h3>
+
+		<p>As we've seen so far, it's incredibly easy to fix things when you spot what's wrong! The skill isn't in the fixing but in the finding. Once you've coding for a while, you'll be able to 'see' bugs and problems just by looking ... but until then, we have one mighty weapon at our disposal....the debugger.</p>
+
+		<p>A debugger is a tool that allows us to 'inspect' our code while it runs. This is incredibly powerful, especially if you're trying to find [debug] algorithmic and state errors.</p>
+
+		<h3>The Challenge</h3>
+
+		<p>We're going to get everyone familiar with debugging tools and how to use them! To do this, we need to learn some new terms:</p>
+		<ul>
+			<li><strong>Variable</strong> - This is a 'holder' of some data or thing in your program. Could be a number, or some text [string] or even part of your page itself (e.g. a title).
+			<li><strong>State</strong> - This refers to the state of your program (e.g. what values everything has) when it's being run!</li>
+			<li><strong>Breakpoint</strong> - This is a mark we put in the code to tell the debugger where to stop running. When the breakpoint is reached [hit], the code stops running and we can poke around inside the state to see what's going on!</li>
+			<li><strong>Step Into</strong> - This means looking in more detail at what a particular piece of code does by 'stepping' through it line by line.</li>
+			<li><strong>Step Over</strong> - This means passing over a particular line/section of code (e.g. NOT looking at it in detail).</li>
+		</ul>
+
+		<!-- Level A -->
+		<h3><a name="level_a" onclick="$('#level_a_content').toggle();" class="action">Just Starting Out ...</a></h3>
+
+		<div id="level_a_content" class="unravel">
+			<p>Fire up <a href="http://jsbin.com/agigim/latest" target="new">this page</a> again (or your own version of the last challenges code), go to the scripts or sources tab in your developer tools and then select the first 'inline' code section from the drop down (or the page you're looking at in Chrome).</p>
+			<p>You should see the code that we've just been looking at. Now set a breakpoint in the 'Loop' of the 'Do_A_Loop' function.</p>
+			<p>Once you've got your breakpoint set, you can have a look at the values of different variables (notably 'i' in the variables/locals part of the screen - normally on the right handside). See how these variables can change as you execute through the code (look for the 'play' or continue button).
+			<div onclick="$('#level_a_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_a_help" class="unravel help">
+				<p>A breakpoint is set by clicking on the left hand margin of the code (near the line numbers).</p>
+				<p>Make sure you 'remove' breakpoints when you're done with them, else you might find your pages not loading properly or pausing when you don't expect it!</p>
+			</div>
+		</div>
+		<!-- Level A -->
+
+
+		<!-- Level B -->
+		<h3><a name="level_b" onclick="$('#level_b_content').toggle();" class="action">Staking out the Middle Ground ...</a></h3>
+
+		<div id="level_b_content" class="unravel">
+			<p>Try debugging <a href="http://jsbin.com/uyutof/latest" target="new">this page</a> for fun....see how it uses loops and variables 
+			<div onclick="$('#level_b_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_b_help" class="unravel help">
+					<p>You're on your own now! Google is your Friend....</p>
+			</div>
+		</div>
+		<!-- Level B -->
+
+
+		<!-- Level C -->
+		<h3><a name="level_c" onclick="$('#level_c_content').toggle();" class="action">Deep Into the Zone ...</a></h3>
+
+		<div id="level_c_content" class="unravel">
+
+			<p>Go deeper into debugging by looking at how you can use the Developer Tools to watch network traffic too. If you bring up <a href="http://jsbin.com/owapav/latest" target="new">this page</a> and switch to the 'network' view you'll be able to see the JSON data structures being returned from Facebook. You can go further by trying this with your own Facebook App or another site of your choosing!
+			<div onclick="$('#level_c_help').toggle();" class="action">Give Me Some Help!</div>
+
+			<div id="level_c_help" class="unravel help">
+				<p>You're on your own now! Google is your Friend....</p>
+			</div>
+		</div>
+		<!-- Level C -->
+
+	</body>
+</html>
