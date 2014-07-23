@@ -1,82 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset='utf-8'>
 		<title>Code_Camp: Challenge 1</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<style type="text/css">
-			.action {
-				cursor: pointer;
-				color: #111166;
-			}
-
-			.action:hover {
-				text-decoration: underline;
-			}
-
-			.unravel {
-				display: none;
-			}
-			.code {
-				align-content: stretch;
-				align-items: stretch;
-				align-self: stretch;
-				background: #EEEEEE;
-				border-bottom: 1px solid #D4D4D4;
-				border-left: 1px solid #D4D4D4;
-				border-right: 1px solid #D4D4D4;
-				border-top: 1px solid #D4D4D4;
-				color: #000000;
-				display: block;
-				font: normal normal 400 13.2px/normal "Courier New";
-				padding: 10px;
-				resize: none;
-			}
-
-			h1 {
-				color: #FF0000;
-				float: right;
-				margin-top: 0px;
-				font-size: 3em;
-
-			}
-
-			h2 {
-				color: #444444;
-			}
-
-			h3 {
-
-			}
-
-			body {
-				font-family: "Myriad Pro", "Arial", sans-serif;
-				word-spacing: 0.5px;
-			}
-
-			ul {
-				background-color: #FFD8AA;
-			}
-
-			ol {
-				background-color: #FFD8AA;
-			}
-
-			li {
-				padding-bottom: 5px;
-			}
-
-			p {
-				font-family: "Tahoma", "Times New Roman", serif;
-			}
-
-			.help {
-				background-color: #DDFFDD;
-			}
-		</style>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	</head>
 	<body>
 
-		<h1>Code_Camp</h1>
+		<a href="web-challenge-2.html">
+			<div id="next">&gt;</div>
+		</a>
+		<a href="index.html">
+			<div id="previous">&lt;</div>
+		</a>
+
+		<h1><a href="index.html">Code_Camp</a></h1>
 
 		<h2>Challenge 1: Get Your Console On ...</h2>
 
@@ -124,7 +63,7 @@
 			<p>Use a jQuery <a href="http://www.w3schools.com/jquery/jquery_ref_selectors.asp" target="new">selector</a> to grab the element or elements you want (use 'inspect element' to get IDs and CSS classes). Then take advantage of jQuery's CSS manipulation methods (Google for 'jQuery CSS') and try to change some colours, fonts and positions.</p>
 			<div onclick="$('#level_b_help').toggle();" class="action">Give Me Some Help!</div>
 
-			<div id="level_b_help" class="unravel">
+			<div id="level_b_help" class="unravel help">
 				<p>Make the background yellow:</p>
 				<div class="code">$("body").css("background-color", "yellow");</div>
 				<p>Move the logo to the left:</p>
@@ -141,7 +80,7 @@
 			<p>How about making this page a little more lively. I think we'd all like to see some animation happening here. Get the logo moving bouncing around the screen, maybe even on demand (inject a little button into the page by using the jQuery .prepend method and assign a <a href="http://api.jquery.com/click/" target="new">click event</a>).</p>
 			<div onclick="$('#level_c_help').toggle();" class="action">Give Me Some Help!</div>
 
-			<div id="level_c_help" class="unravel">
+			<div id="level_c_help" class="unravel help">
 				<p>How about:</p>
 				<div class="code">$("#hlogo").css({"position": "absolute", "z-index": "100"}).animate({left: "40%", top: "40%"}, 2000).animate({left: "80%", top: "0%"}, 2000).animate({left: "0%", top: "0%"}, 2000);</div>
 				<p>Or:</p>

@@ -1,83 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset='utf-8'>
 		<title>Code_Camp: Challenge 2</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<style type="text/css">
-			.action {
-				cursor: pointer;
-				color: #111166;
-			}
-
-			.action:hover {
-				text-decoration: underline;
-			}
-
-			.unravel {
-				display: none;
-			}
-			.code {
-				align-content: stretch;
-				align-items: stretch;
-				align-self: stretch;
-				background: #EEEEEE;
-				border-bottom: 1px solid #D4D4D4;
-				border-left: 1px solid #D4D4D4;
-				border-right: 1px solid #D4D4D4;
-				border-top: 1px solid #D4D4D4;
-				color: #000000;
-				display: block;
-				font: normal normal 400 13.2px/normal "Courier New";
-				padding: 10px;
-				resize: none;
-			}
-
-			h1 {
-				color: #FF0000;
-				float: right;
-				margin-top: 0px;
-				font-size: 3em;
-
-			}
-
-			h2 {
-				color: #444444;
-			}
-
-			h3 {
-
-			}
-
-			body {
-				font-family: "Myriad Pro", "Arial", sans-serif;
-				letter-spacing: 0.5px;
-				word-spacing: 0.5px;
-			}
-
-			ul {
-				background-color: #FFD8AA;
-			}
-
-			ol {
-				background-color: #FFD8AA;
-			}
-
-			li {
-				padding-bottom: 5px;
-			}
-
-			p {
-				font-family: "Tahoma", "Times New Roman", serif;
-			}
-
-			.help {
-				background-color: #DDFFDD;
-			}
-		</style>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css" />
 	</head>
 	<body>
 
-		<h1>Code_Camp</h1>
+		<a href="web-challenge-3.html">
+			<div id="next">&gt;</div>
+		</a>
+		<a href="web-challenge-1.html">
+			<div id="previous">&lt;</div>
+		</a>
+
+		<h1><a href="index.html">Code_Camp</a></h1>
 
 		<h2>Challenge 2: Squashing those Bugs ...</h2>
 
@@ -123,7 +61,7 @@
 
 		<div id="level_b_content" class="unravel">
 			<p>An algorithmic error occurs when your code runs, but doesn't actually do what you quite wanted!</p>
-			<p>Go to <a href="http://jsbin.com/ipogut/latest" target="new">this page</a> 
+			<p>Go to <a href="http://jsbin.com/ipogut/latest" target="new">this page</a>
 			<div onclick="$('#level_b_help').toggle();" class="action">Give Me Some Help!</div>
 
 			<div id="level_b_help" class="unravel help">
